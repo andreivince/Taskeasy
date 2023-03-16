@@ -12,15 +12,18 @@
         <div class="column-left-tasks">
             <p class="tasks-title">Your List</p>
             <div class="tasks-list">
-                <a href="">> Everyday</a>
-                <a href="">> Tasks</a>
+                <a href="/task-everyday/tasks.html">> Everyday</a>
+                <a href="/task-task/tasks-task.html">> Tasks</a>
                 </div>
         </div>
         <div class="column-right-tasks">
             <p class="right-title">Everyday</p>
             <p>Every task repeats every day.</p>
-            <input type="text" placeholder="Enter your task" class="box">
+            <input type="text" placeholder="Enter your task" class="box" id="new_task">
+            <button onclick="display()">Enter</button>
+            <ul id="output"></ul>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
