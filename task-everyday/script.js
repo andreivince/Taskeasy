@@ -9,11 +9,14 @@ function display() {
     checkbox.type = 'checkbox';
     const delete_button = document.createElement('input')
     delete_button.type = 'button';
+    delete_button.value = 'X';
 
     // Add the checkbox and text to the list item
     li.appendChild(checkbox);
     li.appendChild(document.createTextNode(value));
     li.appendChild(delete_button)
+    
+    
 
     // Add the new list item to the existing list
     const ul = document.getElementById('output');
@@ -65,9 +68,10 @@ function everyday() {
             checkbox.type = 'checkbox';
             const delete_button = document.createElement('input')
             delete_button.type = 'button';
+            delete_button.value = 'X';
             li.appendChild(checkbox);
             li.appendChild(document.createTextNode(task));
-            li.appendChild(delete_button)
+            li.appendChild(delete_button);
             ul.appendChild(li);
             delete_button.addEventListener('click', function() {
                 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -88,5 +92,7 @@ function everyday() {
     });
 }
 
-// Call the "everyday" function every 5000 milliseconds
-setInterval(everyday, 5000);
+const now = new Date();
+const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+const timeUntilTomorrow = tomorrow - now;
+setInterval(everyday, timeUntilTomorrow);
