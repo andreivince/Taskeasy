@@ -1,0 +1,54 @@
+/* Import Google Fonts */
+@import url('<https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap>');
+
+/* Set default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Set styles for the main container */
+.home-container {
+    height: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Apply styles to the main element */
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Apply styles to all anchor tags within main */
+.home-main p {
+    color: rgb(52, 55, 61);
+    margin: 0px;
+}
+
+/* Apply styles to the title element within main */
+.home-main .home-title {
+    font-size: 90px;
+}
+
+/* Apply styles to the text element within main */
+.home-main .home-text {
+    font-size: 20px;
+}
+
+/* Apply styles to the button element within main */
+.home-main .home-button button {
+    width: 120px;
+    height: 40px;
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background-color: rgb(0, 90, 158);
+    border: none;
+    cursor: pointer;
+}
